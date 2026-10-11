@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "designVersion": "0.2.13",
+  "compilerVersion": "0.4.0",
+  "inputHash": "245510b677cb7d8b4517662707da2b4115c160ba877437bd490ef40740d50c95",
+  "sourceRepository": "https://github.com/0froq/lig",
+  "sourceRef": "zed-port-2026-10-11",
+  "variants": [
+    "light",
+    "dark",
+    "light-paper",
+    "dark-paper"
+  ],
+  "colorPolicy": "srgb-constant-lh-chroma-reduce",
+  "port": "zed",
+  "packageVersion": "0.1.0",
+  "distributionRepository": "https://github.com/0froq/zed-theme-LiG",
+  "files": {
+    "extension.toml": "feffd91d29de5220e7ebf86f7ae357eee7062d29c80ee72f579ce958061f3ceb",
+    "README.md": "22dcae4af3d07baf0649ddd25c1e8016fea0e230723482032496cbdda854a822",
+    "LICENSE": "aa1f4295dcb1944eadb4f4fc622a7cee91eef291a00972ef711e0b182e4255c9",
+    "themes/lig-light.json": "0c67c193edcee06df155335d19beb6e732d5b69a6fd15f99c72b3ed12a1ec34a",
+    "themes/lig-dark.json": "8781e0160a143402e47707c4ed8cf91dcf03363bf283c14dbd0f68805aba9286",
+    "themes/lig-light-paper.json": "ae731d3c596c10b64ce7c3d80721600027c224e0bd4d1da9945bc203435b28e9",
+    "themes/lig-dark-paper.json": "276ab8c803666e08793036f4af9e64ca56efd26a1d15e5e9d40d058e07d78670"
+  }
+}
