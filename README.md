@@ -40,7 +40,7 @@ For a repository installation, fetch tags and check out the chosen release, then
 
 ## Source and reproducibility
 
-Do not edit generated themes here. Change the palette or adapter in [LiG's source snapshot](https://github.com/0froq/lig/tree/codex/zed-inherit-font-weight), then run `pnpm ports:generate` there. `dist/ports/zed-extension/` contains this repository payload and `lig-zed-extension.zip`. Publish a new repository commit and release when updating the generated output.
+Do not edit generated themes here. Change the palette or adapter in [LiG's source snapshot](https://github.com/0froq/lig/tree/codex/mono-muted-parity), then run `pnpm ports:generate` there. `dist/ports/zed-extension/` contains this repository payload and `lig-zed-extension.zip`. Publish a new repository commit and release when updating the generated output.
 
 `lig-build.json` records the source ref, compiler/design versions, exact input SHA-256 and checksums for every payload file. Website local themes and repository themes are checked for byte equality. Run `python3 scripts/verify.py` to check this distribution, or `python3 scripts/sync.py /path/to/lig/dist/ports/zed-extension` to import a new verified compiler payload. Distribution is static; installing it does not fetch tokens or require Node.js.
 
@@ -51,6 +51,8 @@ The adapter emits Zed's [v0.2.0 theme format](https://zed.dev/docs/extensions/th
 Zed's native capture names are mapped explicitly to LiG's shared roles. Language queries and optional semantic tokens can classify the same code differently from Neovim/VS Code. The theme format cannot express every shared style modifier (for example link underlines); supported foreground, italic and weight intent is preserved. Dim terminal slots reuse the normal ANSI colors; bright slots retain the shared emphasis colors.
 
 Ordinary syntax inherits the editor's `buffer_font_weight`; the theme does not force a regular weight. Only headings (`title`) and strong emphasis (`emphasis.strong`) explicitly use weight 700.
+
+Native `attribute` captures use neutral property ink so HTML/Vue attribute names remain gray while tags stay green. Zed's capture vocabulary also reuses `attribute` for annotations in some languages; those captures share the neutral fallback. Shared muted syntax ink is quieter than UI subtle text in both light and dark modes.
 
 Data checks validate token provenance, all 16 ANSI slots, appearance metadata, artifact checksums and ZIP contents. They do not establish native visual acceptance. Manually check all four variants in Zed: editor text and syntax, selections/cursor, completion menus, panels/tabs, diagnostics/Git colors and ANSI output. Zed settings or theme overrides may take precedence.
 

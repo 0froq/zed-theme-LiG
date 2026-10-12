@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "designVersion": "0.2.14",
-  "compilerVersion": "0.7.1",
-  "inputHash": "265ffb5fc137ea026f9fcf6de29d0fc2eeae386c87a5ae059dbbe848f88aa996",
+  "designVersion": "0.2.15",
+  "compilerVersion": "0.7.2",
+  "inputHash": "172a396739022b63ba8d5df12210c24f4edd6bd3e6b1a9d737b59fc33ac23445",
   "sourceRepository": "https://github.com/0froq/lig",
-  "sourceRef": "codex/zed-inherit-font-weight",
+  "sourceRef": "codex/mono-muted-parity",
   "variants": [
     "light",
     "dark",
@@ -23,11 +23,11 @@
     ".github/workflows/release.yml": "c1d4388f668ebd4b2899a4584ac6ddb6cea720960952a6fcd6a907950677379d",
     "PUBLISHING.md": "4dffd0fcd4f3e52303305066e825ba05764cf834137f3b8ba02bcb5867a7932a",
     "extension.toml": "52073880ed63904fb44eeb2714e860fd7d154617a2ea6f0198d43adfda35ce50",
-    "README.md": "78bf0cd058af6755d1150d8240f0254a02428d3dca9aff7890cb7c24f058cc55",
+    "README.md": "f8861be60d28de549335ffd6be8a5f901f3483559c4226683a8fe5f1535b50f7",
     "LICENSE": "aa1f4295dcb1944eadb4f4fc622a7cee91eef291a00972ef711e0b182e4255c9",
-    "themes/lig-light.json": "db24e6249c8918304930e943874a7d510eda4fbdfe154051cca2d425fc5c3979",
-    "themes/lig-dark.json": "c825c40b96082882bcf46da257ec1d9644e37d3f9795ee8f4fc04fa62071ef28",
-    "themes/lig-light-paper.json": "06120469615dd7acd1e8f10967ebc770be5bccd0e5da72965ca52b52331610ee",
-    "themes/lig-dark-paper.json": "0419230faea95382b3375e9ffffd4e89fc12ea8e12950d08e5407a9bea40cff8"
+    "themes/lig-light.json": "926b400437bbe2cddb43f6234c27460c49a17cf73560e1b80c4351e919064bc4",
+    "themes/lig-dark.json": "364ca68ce7896de1d1211acdb123f82cf2cbfcd1c9598266ed67f8abee06d1d8",
+    "themes/lig-light-paper.json": "5f55c5d10f7669452c4ce8b551976bc3218d0ff96086ef8eb39f19f0d3e1bb6c",
+    "themes/lig-dark-paper.json": "6330d335af38277a5b96ac1a3867377105372ff8ef995e150bb71af376f557d7"
   }
 }

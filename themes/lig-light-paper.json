@@ -204,7 +204,7 @@
         ],
         "syntax": {
           "attribute": {
-            "color": "#38964d",
+            "color": "#5f5d59",
             "font_style": "normal",
             "font_weight": null
           },
@@ -214,12 +214,12 @@
             "font_weight": null
           },
           "comment": {
-            "color": "#9a9893",
+            "color": "#a6a49f",
             "font_style": "normal",
             "font_weight": null
           },
           "comment.doc": {
-            "color": "#9a9893",
+            "color": "#a6a49f",
             "font_style": "normal",
             "font_weight": null
           },
@@ -324,7 +324,7 @@
             "font_weight": null
           },
           "predictive": {
-            "color": "#9a9893",
+            "color": "#a6a49f",
             "font_style": "normal",
             "font_weight": null
           },
@@ -344,32 +344,32 @@
             "font_weight": null
           },
           "punctuation": {
-            "color": "#9a9893",
+            "color": "#a6a49f",
             "font_style": "normal",
             "font_weight": null
           },
           "punctuation.bracket": {
-            "color": "#9a9893",
+            "color": "#a6a49f",
             "font_style": "normal",
             "font_weight": null
           },
           "punctuation.delimiter": {
-            "color": "#9a9893",
+            "color": "#a6a49f",
             "font_style": "normal",
             "font_weight": null
           },
           "punctuation.list_marker": {
-            "color": "#9a9893",
+            "color": "#a6a49f",
             "font_style": "normal",
             "font_weight": null
           },
           "punctuation.special": {
-            "color": "#9a9893",
+            "color": "#a6a49f",
             "font_style": "normal",
             "font_weight": null
           },
           "string": {
-            "color": "#9a9893",
+            "color": "#a6a49f",
             "font_style": "normal",
             "font_weight": null
           },
