@@ -7,7 +7,7 @@ Zed is an editor port: the adapter covers editor chrome, syntax, diagnostics, Gi
 Clone the repository, optionally pinned to this release:
 
 ```sh
-git clone --branch v0.1.1 https://github.com/0froq/zed-theme-LiG.git
+git clone --branch v0.1.2 https://github.com/0froq/zed-theme-LiG.git
 ```
 
 In Zed run `zed: install dev extension` and select the cloned directory containing `extension.toml`. Then use `theme selector: toggle` to choose **LiG Light**, **LiG Dark**, **LiG Light Paper** or **LiG Dark Paper**. The repository contains only a theme extension; no language server or executable code is included. Zed documents this workflow in [Developing Extensions](https://zed.dev/docs/extensions/developing-extensions).
@@ -40,7 +40,7 @@ For a repository installation, fetch tags and check out the chosen release, then
 
 ## Source and reproducibility
 
-Do not edit generated themes here. Change the palette or adapter in [LiG's source snapshot](https://github.com/0froq/lig/tree/editor-ports-2026-10-12), then run `pnpm ports:generate` there. `dist/ports/zed-extension/` contains this repository payload and `lig-zed-extension.zip`. Publish a new repository commit and release when updating the generated output.
+Do not edit generated themes here. Change the palette or adapter in [LiG's source snapshot](https://github.com/0froq/lig/tree/store-hooks-2026-10-12), then run `pnpm ports:generate` there. `dist/ports/zed-extension/` contains this repository payload and `lig-zed-extension.zip`. Publish a new repository commit and release when updating the generated output.
 
 `lig-build.json` records the source ref, compiler/design versions, exact input SHA-256 and checksums for every payload file. Website local themes and repository themes are checked for byte equality. Run `python3 scripts/verify.py` to check this distribution, or `python3 scripts/sync.py /path/to/lig/dist/ports/zed-extension` to import a new verified compiler payload. Distribution is static; installing it does not fetch tokens or require Node.js.
 
@@ -51,3 +51,7 @@ The adapter emits Zed's [v0.2.0 theme format](https://zed.dev/docs/extensions/th
 Zed's native capture names are mapped explicitly to LiG's shared roles. Language queries and optional semantic tokens can classify the same code differently from Neovim/VS Code. The theme format cannot express every shared style modifier (for example link underlines); supported foreground, italic and weight intent is preserved. Dim terminal slots reuse the normal ANSI colors; bright slots retain the shared emphasis colors.
 
 Data checks validate token provenance, all 16 ANSI slots, appearance metadata, artifact checksums and ZIP contents. They do not establish native visual acceptance. Manually check all four variants in Zed: editor text and syntax, selections/cursor, completion menus, panels/tabs, diagnostics/Git colors and ANSI output. Zed settings or theme overrides may take precedence.
+
+## Store publishing
+
+The theme extension ID is `lig-theme`. Stable GitHub Releases trigger registry synchronization after the first human-reviewed registration. Follow [PUBLISHING.md](https://github.com/0froq/zed-theme-LiG/blob/main/PUBLISHING.md) for manual first submission and later release hooks; a successful build alone does not mean the Zed store has updated.
