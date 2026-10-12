@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "designVersion": "0.2.15",
-  "compilerVersion": "0.7.2",
-  "inputHash": "172a396739022b63ba8d5df12210c24f4edd6bd3e6b1a9d737b59fc33ac23445",
+  "compilerVersion": "0.7.3",
+  "inputHash": "e839b1a8196c82661995ab92182c1883dde0634fe6923c43f7cc64d66cb72baa",
   "sourceRepository": "https://github.com/0froq/lig",
   "sourceRef": "codex/mono-muted-parity",
   "variants": [
@@ -23,11 +23,11 @@
     ".github/workflows/release.yml": "c1d4388f668ebd4b2899a4584ac6ddb6cea720960952a6fcd6a907950677379d",
     "PUBLISHING.md": "4dffd0fcd4f3e52303305066e825ba05764cf834137f3b8ba02bcb5867a7932a",
     "extension.toml": "52073880ed63904fb44eeb2714e860fd7d154617a2ea6f0198d43adfda35ce50",
-    "README.md": "f8861be60d28de549335ffd6be8a5f901f3483559c4226683a8fe5f1535b50f7",
+    "README.md": "032866d1e081ede6591c50fa31ec508a92b3dfbc73f2e571d7f24ee27823c347",
     "LICENSE": "aa1f4295dcb1944eadb4f4fc622a7cee91eef291a00972ef711e0b182e4255c9",
-    "themes/lig-light.json": "926b400437bbe2cddb43f6234c27460c49a17cf73560e1b80c4351e919064bc4",
-    "themes/lig-dark.json": "364ca68ce7896de1d1211acdb123f82cf2cbfcd1c9598266ed67f8abee06d1d8",
-    "themes/lig-light-paper.json": "5f55c5d10f7669452c4ce8b551976bc3218d0ff96086ef8eb39f19f0d3e1bb6c",
-    "themes/lig-dark-paper.json": "6330d335af38277a5b96ac1a3867377105372ff8ef995e150bb71af376f557d7"
+    "themes/lig-light.json": "3408af140ddf45013fe373f99165600641a4607e527f80ccee2fdd3302dce4a1",
+    "themes/lig-dark.json": "b1e13a48d1488655b94f3c57385c4d3a1949be67500bf7205b948b86dcf4beba",
+    "themes/lig-light-paper.json": "2ed93ac52535c86be7f4ff22787aeb08c49f622e338bf8924a85cfa4e38a1ec2",
+    "themes/lig-dark-paper.json": "5094259ce8e75670f24bcbd501876de006334fc0b72901333b48134510d2fa54"
   }
 }
