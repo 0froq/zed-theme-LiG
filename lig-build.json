@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "designVersion": "0.2.14",
-  "compilerVersion": "0.7.0",
-  "inputHash": "9705c4aa12561ea16d5f0aaf7f3fad839d12ec0412a4a82f32a6c50139f4b154",
+  "compilerVersion": "0.7.1",
+  "inputHash": "265ffb5fc137ea026f9fcf6de29d0fc2eeae386c87a5ae059dbbe848f88aa996",
   "sourceRepository": "https://github.com/0froq/lig",
-  "sourceRef": "store-hooks-2026-10-12",
+  "sourceRef": "codex/zed-inherit-font-weight",
   "variants": [
     "light",
     "dark",
@@ -13,21 +13,21 @@
   ],
   "colorPolicy": "srgb-constant-lh-chroma-reduce",
   "port": "zed",
-  "packageVersion": "0.1.2",
+  "packageVersion": "0.1.3",
   "distributionRepository": "https://github.com/0froq/zed-theme-LiG",
   "files": {
     "scripts/verify.py": "2923cfcab5d3e3f75a160b34ede87264fdddd8087a64fe4eff94de88248c0c86",
     "scripts/sync.py": "b980eb4539e8e73f1ec821bf631e6caea25997bad8e71504470a8c0f0490af28",
-    "scripts/release.py": "95f6ce1ad05f82b3be4b73a5eb8afd475aa9879e16765f7478b3cd25cd827cf8",
+    "scripts/release.py": "f42c018edf0c93dc0d6e3abc40ee2496c01a1daefed10363acebd2d8cbf2b42e",
     ".github/workflows/verify.yml": "2c5a2f001d5356985e6cd6390d17b5ba8f93e17beda7659c237b92c178d5a681",
     ".github/workflows/release.yml": "c1d4388f668ebd4b2899a4584ac6ddb6cea720960952a6fcd6a907950677379d",
     "PUBLISHING.md": "4dffd0fcd4f3e52303305066e825ba05764cf834137f3b8ba02bcb5867a7932a",
-    "extension.toml": "dd581d59447d56b50bf585cbfa79bb8d2850f4440ec2731376a0ce1ce67b64a0",
-    "README.md": "1c1241ed2a17b07b0eab02e8ca70dfa9b439e547afc4f2adf1790cdf94f8258c",
+    "extension.toml": "52073880ed63904fb44eeb2714e860fd7d154617a2ea6f0198d43adfda35ce50",
+    "README.md": "78bf0cd058af6755d1150d8240f0254a02428d3dca9aff7890cb7c24f058cc55",
     "LICENSE": "aa1f4295dcb1944eadb4f4fc622a7cee91eef291a00972ef711e0b182e4255c9",
-    "themes/lig-light.json": "72e1201507d472a256ce6f033500775775af1d5b2b3fba9c379a47118c0cee15",
-    "themes/lig-dark.json": "473074f9b08d4fe6ea59d127c39339b424eb42be22175de489694c512f8657ac",
-    "themes/lig-light-paper.json": "cc867f74ff3d5187fbad0382fb0fa8a7b2968409d961a11ee91c60c37b89be60",
-    "themes/lig-dark-paper.json": "f444618eb52326df02478ea235cc9b18d1ef4494596a14593bcb378fd5c81e67"
+    "themes/lig-light.json": "db24e6249c8918304930e943874a7d510eda4fbdfe154051cca2d425fc5c3979",
+    "themes/lig-dark.json": "c825c40b96082882bcf46da257ec1d9644e37d3f9795ee8f4fc04fa62071ef28",
+    "themes/lig-light-paper.json": "06120469615dd7acd1e8f10967ebc770be5bccd0e5da72965ca52b52331610ee",
+    "themes/lig-dark-paper.json": "0419230faea95382b3375e9ffffd4e89fc12ea8e12950d08e5407a9bea40cff8"
   }
 }
