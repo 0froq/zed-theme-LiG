@@ -40,7 +40,7 @@ For a repository installation, fetch tags and check out the chosen release, then
 
 ## Source and reproducibility
 
-Do not edit generated themes here. Change the palette or adapter in [LiG's source snapshot](https://github.com/0froq/lig/tree/codex/zed-inherit-font-weight), then run `pnpm ports:generate` there. `dist/ports/zed-extension/` contains this repository payload and `lig-zed-extension.zip`. Publish a new repository commit and release when updating the generated output.
+Do not edit generated themes here. Change the palette or adapter in [LiG's source snapshot](https://github.com/0froq/lig/tree/codex/mono-muted-parity), then run `pnpm ports:generate` there. `dist/ports/zed-extension/` contains this repository payload and `lig-zed-extension.zip`. Publish a new repository commit and release when updating the generated output.
 
 `lig-build.json` records the source ref, compiler/design versions, exact input SHA-256 and checksums for every payload file. Website local themes and repository themes are checked for byte equality. Run `python3 scripts/verify.py` to check this distribution, or `python3 scripts/sync.py /path/to/lig/dist/ports/zed-extension` to import a new verified compiler payload. Distribution is static; installing it does not fetch tokens or require Node.js.
 
@@ -51,6 +51,37 @@ The adapter emits Zed's [v0.2.0 theme format](https://zed.dev/docs/extensions/th
 Zed's native capture names are mapped explicitly to LiG's shared roles. Language queries and optional semantic tokens can classify the same code differently from Neovim/VS Code. The theme format cannot express every shared style modifier (for example link underlines); supported foreground, italic and weight intent is preserved. Dim terminal slots reuse the normal ANSI colors; bright slots retain the shared emphasis colors.
 
 Ordinary syntax inherits the editor's `buffer_font_weight`; the theme does not force a regular weight. Only headings (`title`) and strong emphasis (`emphasis.strong`) explicitly use weight 700.
+
+Native `attribute` captures use neutral property ink so HTML/Vue attribute names remain gray while tags stay green. Zed's capture vocabulary also reuses `attribute` for annotations in some languages; those captures share the neutral fallback. Shared muted syntax ink is quieter than UI subtle text in both light and dark modes.
+
+### Capture parity with Neovim
+
+The adapter audits JavaScript, TypeScript, TSX, Vue, HTML, Python, Rust, Lua, JSON and Markdown. [The capture inventory and semantic examples](https://github.com/0froq/lig/blob/codex/mono-muted-parity/ports/zed/fixtures/capture-parity.json) pin upstream query revisions and hashes; data contracts compare shared roles and generated foreground/italic/weight intent against Neovim in all four variants. These checks cover the recorded query snapshots, not every language, future extension update or active LSP result.
+
+Zed accepts dotted theme keys and resolves the longest matching capture prefix. Specific semantics must be mapped before they fall back to a broader category:
+
+| Native Zed capture                        | Shared intent / Neovim counterpart                               |
+| ----------------------------------------- | ---------------------------------------------------------------- |
+| `attribute`, `attribute.jsx`              | Gray template property / `tag.attribute`                         |
+| `function.decorator`, `attribute.builtin` | Green annotation / `attribute`                                   |
+| `function.kwargs`, Lua `parameter`        | Green parameter binding / `variable.parameter`                   |
+| `function.builtin`, `function.special`    | Builtin function or macro / `function.builtin`, `function.macro` |
+| `function.method.constructor`             | Constructor / `constructor`                                      |
+| `keyword.operator`                        | Neutral operator / `keyword.operator`                            |
+| `keyword.operator.regex`                  | Escape/reference ink / `character.special`                       |
+| Rust `lifetime`                           | Green annotation / `attribute`                                   |
+| `tag.jsx`                                 | Intrinsic JSX tag / `tag.builtin`                                |
+| `text`, `none`                            | Ordinary prose / `none`                                          |
+
+Some query distinctions cannot be recovered by a theme alone:
+
+- JS/TS/TSX queries reuse `function` or `function.method` for both declarations and calls. Their generic fallback uses call ink; separately classified definitions retain definition ink.
+- `keyword.control` combines control flow, return, async and exception words; some languages put all keywords under `keyword`. The adapter keeps neutral keyword ink rather than coloring every conditional as an action.
+- Rust annotations and HTML/Vue attributes can share bare `attribute`. Python's specific decorator captures can be green, but bare annotations retain the neutral fallback required by templates.
+- Lua table braces and constructor identifiers can share bare `constructor`. Without a language-specific capture, the theme cannot apply Neovim's `constructor.lua` punctuation override safely.
+- Embedded-language queries, overlapping captures and LSP semantic tokens can classify or override the same source differently. This theme does not replace queries or configure semantic-token behavior.
+
+For manual comparison, use a Vue/TSX template with tags and attributes, Python decorators and keyword arguments, a Lua function parameter, a Rust lifetime/macro, JSON keys/string values, and Markdown prose/headings. Compare all four variants with Neovim; also check that regular syntax still inherits the configured font weight. Report the active capture and language-extension version when a difference remains.
 
 Data checks validate token provenance, all 16 ANSI slots, appearance metadata, artifact checksums and ZIP contents. They do not establish native visual acceptance. Manually check all four variants in Zed: editor text and syntax, selections/cursor, completion menus, panels/tabs, diagnostics/Git colors and ANSI output. Zed settings or theme overrides may take precedence.
 
