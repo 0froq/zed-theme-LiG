@@ -1,6 +1,6 @@
 id = "lig"
 name = "LiG"
-version = "0.1.0"
+version = "0.1.1"
 schema_version = 1
 authors = ["0froq"]
 description = "LiG editor themes: Light, Dark, Light Paper and Dark Paper"
